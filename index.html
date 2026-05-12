@@ -1,16 +1,591 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> work in progress</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
- 
+  <title>FlowQuote - Smart Business Documents</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+
+    * {
+      font-family: 'Inter', sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #fafafa;
+      color: #0f172a;
+      overflow-x: hidden;
+    }
+
+    .hero-bg {
+      background:
+        radial-gradient(circle at top left, rgba(59,130,246,0.08), transparent 30%),
+        radial-gradient(circle at bottom right, rgba(168,85,247,0.08), transparent 30%),
+        linear-gradient(to bottom, #ffffff, #f8fafc);
+    }
+
+    .card {
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(15,23,42,0.06);
+      box-shadow:
+        0 10px 40px rgba(15,23,42,0.05);
+    }
+
+    .soft-shadow {
+      box-shadow:
+        0 20px 60px rgba(15,23,42,0.08);
+    }
+
+    .border-soft {
+      border: 1px solid rgba(15,23,42,0.06);
+    }
+
+  </style>
+
 </head>
 <body>
-    <h1 class="text-3xl font-bold text-blue-500 text-center mt-10">
-        work in progress
-    </h1>
+
+
+  <!-- NAVBAR -->
+  <nav class="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-xl border-b border-slate-200/70">
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 py-5 flex items-center justify-between">
+
+      <div class="flex items-center gap-3">
+
+        <div class="w-11 h-11 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 flex items-center justify-center text-white font-bold text-lg shadow-lg shadow-blue-200">
+          F
+        </div>
+
+        <div>
+          <h1 class="text-xl font-bold tracking-tight text-slate-900">
+            FlowQuote
+          </h1>
+
+          <p class="text-xs text-slate-500 mt-0.5">
+            Business Automation Platform
+          </p>
+        </div>
+
+      </div>
+
+
+      <div class="hidden lg:flex items-center gap-10 text-[15px] font-medium text-slate-600">
+
+        <a href="#features" class="hover:text-blue-600 transition">
+          Features
+        </a>
+
+        <a href="#solutions" class="hover:text-blue-600 transition">
+          Solutions
+        </a>
+
+        <a href="#pricing" class="hover:text-blue-600 transition">
+          Pricing
+        </a>
+
+        <a href="#faq" class="hover:text-blue-600 transition">
+          FAQ
+        </a>
+
+      </div>
+
+
+      <div class="flex items-center gap-3">
+
+        <button class="hidden md:block px-5 py-2.5 rounded-xl text-slate-700 hover:bg-slate-100 transition font-medium">
+          Sign In
+        </button>
+
+        <button class="px-5 py-2.5 rounded-xl bg-slate-900 text-white font-semibold hover:bg-slate-800 transition shadow-lg shadow-slate-200">
+          Start Free
+        </button>
+
+      </div>
+
+    </div>
+
+  </nav>
+
+
+  <!-- HERO -->
+  <section class="hero-bg pt-40 pb-24 px-6 lg:px-10 relative overflow-hidden">
+
+    <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
+
+
+      <!-- LEFT -->
+      <div>
+
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 border border-blue-100 text-blue-700 text-sm font-semibold mb-8">
+          Enterprise Invoice & Quotation Platform
+        </div>
+
+
+        <h1 class="text-5xl lg:text-7xl font-black leading-[1.05] tracking-tight text-slate-900">
+          Create Beautiful
+          <span class="text-blue-600">
+            Quotations
+          </span>
+          & Invoices
+          In Minutes.
+        </h1>
+
+
+        <p class="text-slate-600 text-lg leading-9 mt-8 max-w-2xl">
+          Powerful cloud platform for agencies, wholesalers,
+          freelancers and modern businesses to create quotations,
+          invoices and shareable product catalogs instantly.
+        </p>
+
+
+        <div class="flex flex-wrap gap-4 mt-10">
+
+          <button class="px-8 py-4 rounded-2xl bg-slate-900 text-white font-semibold hover:scale-[1.03] transition shadow-xl shadow-slate-200">
+            Start Free Trial
+          </button>
+
+          <button class="px-8 py-4 rounded-2xl bg-white border border-slate-200 text-slate-700 font-semibold hover:bg-slate-50 transition">
+            Watch Demo
+          </button>
+
+        </div>
+
+
+        <div class="flex flex-wrap gap-10 mt-14">
+
+          <div>
+            <h3 class="text-3xl font-black text-slate-900">
+              50K+
+            </h3>
+
+            <p class="text-slate-500 mt-2">
+              Documents Generated
+            </p>
+          </div>
+
+
+          <div>
+            <h3 class="text-3xl font-black text-slate-900">
+              1200+
+            </h3>
+
+            <p class="text-slate-500 mt-2">
+              Businesses
+            </p>
+          </div>
+
+
+          <div>
+            <h3 class="text-3xl font-black text-slate-900">
+              99.9%
+            </h3>
+
+            <p class="text-slate-500 mt-2">
+              Uptime
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- RIGHT -->
+      <div class="relative">
+
+        <div class="absolute -top-10 -left-10 w-40 h-40 bg-blue-100 blur-3xl rounded-full opacity-70"></div>
+        <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-purple-100 blur-3xl rounded-full opacity-70"></div>
+
+
+        <div class="relative card rounded-[36px] p-7 soft-shadow overflow-hidden">
+
+          <div class="flex items-center justify-between pb-5 border-b border-slate-100">
+
+            <div>
+              <h2 class="font-bold text-xl text-slate-900">
+                Invoice Dashboard
+              </h2>
+
+              <p class="text-slate-500 mt-1 text-sm">
+                Business Overview
+              </p>
+            </div>
+
+            <button class="px-4 py-2 rounded-xl bg-blue-600 text-white text-sm font-semibold shadow-lg shadow-blue-100">
+              New Invoice
+            </button>
+
+          </div>
+
+
+          <div class="grid grid-cols-3 gap-4 mt-7">
+
+            <div class="bg-slate-50 rounded-2xl p-5 border border-slate-100">
+              <p class="text-slate-500 text-sm">
+                Revenue
+              </p>
+
+              <h3 class="text-2xl font-black text-slate-900 mt-3">
+                ₹4.8L
+              </h3>
+            </div>
+
+
+            <div class="bg-slate-50 rounded-2xl p-5 border border-slate-100">
+              <p class="text-slate-500 text-sm">
+                Invoices
+              </p>
+
+              <h3 class="text-2xl font-black text-slate-900 mt-3">
+                1,284
+              </h3>
+            </div>
+
+
+            <div class="bg-slate-50 rounded-2xl p-5 border border-slate-100">
+              <p class="text-slate-500 text-sm">
+                Pending
+              </p>
+
+              <h3 class="text-2xl font-black text-slate-900 mt-3">
+                32
+              </h3>
+            </div>
+
+          </div>
+
+
+          <div class="mt-8 bg-slate-50 rounded-3xl border border-slate-100 p-5">
+
+            <div class="flex items-center justify-between mb-6">
+
+              <h3 class="font-bold text-lg text-slate-900">
+                Recent Quotations
+              </h3>
+
+              <span class="text-sm text-slate-500">
+                Last 7 days
+              </span>
+
+            </div>
+
+
+            <div class="space-y-4">
+
+              <div class="bg-white rounded-2xl p-5 border border-slate-100 flex items-center justify-between shadow-sm">
+
+                <div>
+                  <h4 class="font-semibold text-slate-900">
+                    Website Development
+                  </h4>
+
+                  <p class="text-sm text-slate-500 mt-1">
+                    ABC Technologies
+                  </p>
+                </div>
+
+                <div class="text-right">
+                  <p class="font-black text-lg text-slate-900">
+                    ₹58,000
+                  </p>
+
+                  <p class="text-green-600 text-sm mt-1 font-medium">
+                    Approved
+                  </p>
+                </div>
+
+              </div>
+
+
+              <div class="bg-white rounded-2xl p-5 border border-slate-100 flex items-center justify-between shadow-sm">
+
+                <div>
+                  <h4 class="font-semibold text-slate-900">
+                    Mobile App UI Design
+                  </h4>
+
+                  <p class="text-sm text-slate-500 mt-1">
+                    Pixel Studio
+                  </p>
+                </div>
+
+                <div class="text-right">
+                  <p class="font-black text-lg text-slate-900">
+                    ₹24,500
+                  </p>
+
+                  <p class="text-yellow-600 text-sm mt-1 font-medium">
+                    Pending
+                  </p>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- TRUSTED -->
+  <section class="py-16 bg-white border-y border-slate-100">
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+
+      <p class="text-center uppercase tracking-[5px] text-xs font-semibold text-slate-400 mb-10">
+        Trusted By Modern Businesses
+      </p>
+
+      <div class="grid grid-cols-2 md:grid-cols-5 gap-10 text-center text-slate-400 text-2xl font-bold">
+        <div>NovaCorp</div>
+        <div>CloudEdge</div>
+        <div>Vertex</div>
+        <div>AxisFlow</div>
+        <div>PixelLab</div>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FEATURES -->
+  <section id="features" class="py-28 px-6 lg:px-10 bg-[#fcfcfd]">
+
+    <div class="max-w-7xl mx-auto">
+
+      <div class="text-center max-w-3xl mx-auto">
+
+        <p class="text-blue-600 uppercase tracking-[5px] text-sm font-semibold mb-5">
+          Features
+        </p>
+
+        <h2 class="text-4xl lg:text-6xl font-black leading-tight text-slate-900">
+          Everything You Need To Run Business Documents.
+        </h2>
+
+        <p class="text-slate-600 text-lg leading-8 mt-7">
+          Modern tools designed for startups, wholesalers,
+          agencies and growing businesses.
+        </p>
+
+      </div>
+
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-20">
+
+
+        <div class="bg-white rounded-[30px] p-8 border border-slate-100 shadow-sm hover:shadow-xl transition duration-300 hover:-translate-y-2">
+
+          <div class="w-14 h-14 rounded-2xl bg-blue-50 flex items-center justify-center text-2xl">
+            📄
+          </div>
+
+          <h3 class="text-2xl font-bold text-slate-900 mt-8">
+            Smart Quotations
+          </h3>
+
+          <p class="text-slate-600 mt-4 leading-8">
+            Generate beautiful quotations with taxes,
+            discounts and professional layouts instantly.
+          </p>
+
+        </div>
+
+
+        <div class="bg-white rounded-[30px] p-8 border border-slate-100 shadow-sm hover:shadow-xl transition duration-300 hover:-translate-y-2">
+
+          <div class="w-14 h-14 rounded-2xl bg-purple-50 flex items-center justify-center text-2xl">
+            ⚡
+          </div>
+
+          <h3 class="text-2xl font-bold text-slate-900 mt-8">
+            Instant PDF Export
+          </h3>
+
+          <p class="text-slate-600 mt-4 leading-8">
+            Download high-quality PDF invoices and quotations instantly.
+          </p>
+
+        </div>
+
+
+        <div class="bg-white rounded-[30px] p-8 border border-slate-100 shadow-sm hover:shadow-xl transition duration-300 hover:-translate-y-2">
+
+          <div class="w-14 h-14 rounded-2xl bg-pink-50 flex items-center justify-center text-2xl">
+            🛍️
+          </div>
+
+          <h3 class="text-2xl font-bold text-slate-900 mt-8">
+            Product Catalogs
+          </h3>
+
+          <p class="text-slate-600 mt-4 leading-8">
+            Create beautiful shareable product pages for customers.
+          </p>
+
+        </div>
+
+
+        <div class="bg-white rounded-[30px] p-8 border border-slate-100 shadow-sm hover:shadow-xl transition duration-300 hover:-translate-y-2">
+
+          <div class="w-14 h-14 rounded-2xl bg-green-50 flex items-center justify-center text-2xl">
+            🌍
+          </div>
+
+          <h3 class="text-2xl font-bold text-slate-900 mt-8">
+            Share Anywhere
+          </h3>
+
+          <p class="text-slate-600 mt-4 leading-8">
+            Send quotations instantly via WhatsApp, email or links.
+          </p>
+
+        </div>
+
+
+        <div class="bg-white rounded-[30px] p-8 border border-slate-100 shadow-sm hover:shadow-xl transition duration-300 hover:-translate-y-2">
+
+          <div class="w-14 h-14 rounded-2xl bg-yellow-50 flex items-center justify-center text-2xl">
+            📊
+          </div>
+
+          <h3 class="text-2xl font-bold text-slate-900 mt-8">
+            Business Analytics
+          </h3>
+
+          <p class="text-slate-600 mt-4 leading-8">
+            Track approvals, revenue and business performance.
+          </p>
+
+        </div>
+
+
+        <div class="bg-white rounded-[30px] p-8 border border-slate-100 shadow-sm hover:shadow-xl transition duration-300 hover:-translate-y-2">
+
+          <div class="w-14 h-14 rounded-2xl bg-cyan-50 flex items-center justify-center text-2xl">
+            🔒
+          </div>
+
+          <h3 class="text-2xl font-bold text-slate-900 mt-8">
+            Secure Cloud Storage
+          </h3>
+
+          <p class="text-slate-600 mt-4 leading-8">
+            Store invoices and quotations securely in the cloud.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CTA -->
+  <section class="px-6 lg:px-10 pb-28 bg-[#fcfcfd]">
+
+    <div class="max-w-7xl mx-auto">
+
+      <div class="rounded-[40px] bg-slate-900 overflow-hidden relative p-12 lg:p-20 shadow-2xl shadow-slate-200">
+
+        <div class="absolute top-0 right-0 w-96 h-96 bg-blue-500/20 blur-3xl rounded-full"></div>
+
+        <div class="relative z-10 max-w-4xl">
+
+          <h2 class="text-4xl lg:text-6xl font-black leading-tight text-white">
+            Modernize Your Business Documents Today.
+          </h2>
+
+          <p class="text-slate-300 text-lg leading-8 mt-8 max-w-2xl">
+            Generate quotations, invoices and catalogs in minutes.
+            Built for modern businesses and growing teams.
+          </p>
+
+          <div class="flex flex-wrap gap-4 mt-10">
+
+            <button class="px-8 py-4 rounded-2xl bg-white text-slate-900 font-bold hover:scale-[1.03] transition">
+              Start Free Trial
+            </button>
+
+            <button class="px-8 py-4 rounded-2xl border border-white/10 text-white hover:bg-white/10 transition">
+              Contact Sales
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer class="border-t border-slate-200 bg-white py-10 px-6 lg:px-10">
+
+    <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-6 items-center justify-between">
+
+      <div>
+        <h3 class="text-2xl font-bold text-slate-900">
+          FlowQuote
+        </h3>
+
+        <p class="text-slate-500 mt-2">
+          Smart quotation & invoice automation platform.
+        </p>
+      </div>
+
+
+      <div class="flex items-center gap-8 text-slate-500 text-sm font-medium">
+
+        <a href="#" class="hover:text-blue-600 transition">
+          Privacy
+        </a>
+
+        <a href="#" class="hover:text-blue-600 transition">
+          Terms
+        </a>
+
+        <a href="#" class="hover:text-blue-600 transition">
+          Contact
+        </a>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
 </body>
 </html>
